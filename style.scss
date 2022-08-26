@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    // font-family: 'Rubik Dirt', cursive;
+    // font-family: 'Rubik Maze', cursive;
+    // font-family: 'Silkscreen', cursive;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,4,134,1) 46%, rgba(0,134,255,1) 100%);
+
+}
+
+.fechaHora {
+    position: absolute;
+    top: 1.4%;
+    left: 7%;
+    font-family: 'Rubik Maze', cursive;
+    color: white;
+}
+
+.vestimenta {
+    position: absolute;
+    bottom: 54%;
+    left: 13%;
+    font-family: 'Rubik Dirt', cursive;
+    color: white;
+}
+
+.botonDonde {
+    position: absolute;
+    bottom: 20%;
+    left: 4%;
+    
+}
+
+.parrafoCanciones {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-family: 'Silkscreen', cursive;
+}
+
+.bebida {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-family: 'Rubik Maze', cursive;
+}
+
+.imagenRandom1 {
+    position: absolute;
+    left: 42%;
+    & img {
+        max-height: 19rem;
+
+    }
+}
+
+.imagenRandom2 {
+    grid-area: imagen2;
+}
+
+.imagenRandom3 {
+    grid-area: imagen3;
+}
+
+.imagenRandom4 {
+    grid-area: imagen4;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "tarjeta-lu",
+  "version": "1.0.0",
+  "description": "Una tarjeta de cumpleaños un poco diferente",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --incluide-path sass style.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejo-martinez/tarjea-de-cumple-de-lu.git"
+  },
+  "author": "Alejo Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejo-martinez/tarjea-de-cumple-de-lu/issues"
+  },
+  "homepage": "https://github.com/alejo-martinez/tarjea-de-cumple-de-lu#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

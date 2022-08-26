@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #370486 46%, #0086ff 100%); }
+
+.fechaHora {
+  position: absolute;
+  top: 1.4%;
+  left: 7%;
+  font-family: 'Rubik Maze', cursive;
+  color: white; }
+
+.vestimenta {
+  position: absolute;
+  bottom: 54%;
+  left: 13%;
+  font-family: 'Rubik Dirt', cursive;
+  color: white; }
+
+.botonDonde {
+  position: absolute;
+  bottom: 20%;
+  left: 4%; }
+
+.parrafoCanciones {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  font-family: 'Silkscreen', cursive; }
+
+.bebida {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-family: 'Rubik Maze', cursive; }
+
+.imagenRandom1 {
+  position: absolute;
+  left: 42%; }
+  .imagenRandom1 img {
+    max-height: 19rem; }
+
+.imagenRandom2 {
+  grid-area: imagen2; }
+
+.imagenRandom3 {
+  grid-area: imagen3; }
+
+.imagenRandom4 {
+  grid-area: imagen4; }
