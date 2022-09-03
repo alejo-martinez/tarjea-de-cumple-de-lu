@@ -20,43 +20,89 @@ body {
     left: 7%;
     font-family: 'Rubik Maze', cursive;
     color: white;
+    margin-top: 20px;
+    background-color: rgba(255, 253, 254, 0.12);
+    padding: 15px;
+    border-radius: 13px;
+    font-size: 170%;
+    
 }
 
 .vestimenta {
     position: absolute;
     bottom: 54%;
-    left: 13%;
-    font-family: 'Rubik Dirt', cursive;
+    left: 10%;
+    font-family: 'Silkscreen', cursive;
     color: white;
+    background-color: rgba(255, 253, 254, 0.12);
+    padding: 10px;
+    transform: rotate(-23deg);
+    transition: all 0.3s;
+    border-radius: 15px;
+
+    &:hover {
+        color: darkblue;
+        background-color: white;
+    }
 }
 
 .botonDonde {
     position: absolute;
     bottom: 20%;
-    left: 4%;
-    
+    left: 35%;
+    transition: 0.5s;
+    &:active {
+        transform: scale(0.9);
+    }
+    & span {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 15px;
+        letter-spacing: -0.2px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: capitalize;
+        padding: 5px;
+        cursor: pointer;
+    }
+    & a {
+        text-decoration: none;
+    }
 }
+    
 
 .parrafoCanciones {
     position: absolute;
     right: 10%;
-    top: 3%;
+    top: 20%;
     font-family: 'Silkscreen', cursive;
+    transform: rotate(12deg);
 }
 
 .bebida {
     position: absolute;
     top: 50%;
-    right: 5%;
-    font-family: 'Rubik Maze', cursive;
+    right: 9.5%;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 140%;
+    font-weight: bold;
+    letter-spacing: 7%;
+    background-color: rgba(0, 7, 2, 0.87);
+    padding: 10px;
+    border-radius: 15px;
+    color: wheat;
+    transform: rotate(2deg);
 }
 
 .imagenRandom1 {
     position: absolute;
+    top: 20%;
     left: 42%;
     & img {
         max-height: 19rem;
-
     }
 }
 
