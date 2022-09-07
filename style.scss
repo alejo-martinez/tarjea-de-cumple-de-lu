@@ -5,7 +5,7 @@
 }
 
 
-body {
+.body-index {
     // font-family: 'Rubik Dirt', cursive;
     // font-family: 'Rubik Maze', cursive;
     // font-family: 'Silkscreen', cursive;
@@ -39,6 +39,7 @@ body {
     transform: rotate(-23deg);
     transition: all 0.3s;
     border-radius: 15px;
+    font-size: 77%;
 
     &:hover {
         color: darkblue;
@@ -50,8 +51,10 @@ body {
     position: absolute;
     bottom: 20%;
     left: 35%;
-    transition: 0.5s;
-    &:active {
+    & button {
+        transition: 0.5s;
+     }
+    & button:active {
         transform: scale(0.9);
     }
     & span {
@@ -70,6 +73,11 @@ body {
     }
     & a {
         text-decoration: none;
+    }
+
+    & strong {
+        margin-left: 10px;
+        color: yellow;
     }
 }
     
@@ -116,4 +124,100 @@ body {
 
 .imagenRandom4 {
     grid-area: imagen4;
+}
+
+// PAGINA UBICACION
+
+.body-ubicacion {
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.solucion {
+    width: 30%;
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.botones {
+   position: absolute;
+   top: 25%;
+   left: 33%;
+   & button {
+    margin: 0 20px;
+    padding: 2px;
+    font-family: 'Silkscreen', cursive;
+        &-auto {
+            & span{
+                text-decoration: none; // NO TOMA EL TEXT DECORATION
+            }
+        }
+   }
+}
+
+.contenedor-imagen {
+    & img {
+        max-width: 13%;
+        position: relative;
+        left: 5%;
+        margin-top: 2px;
+        margin-bottom: 15px;
+    }
+}
+
+.contenedor-otra-imagen {
+    & img {
+        max-width: 13%;
+        position: relative;
+        left: 5%;
+        margin-top: 2px;
+        margin-bottom: 15px;
+    }
+}
+
+.advertencia {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+}
+
+.imagenRandom2 {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    & img {
+        // max-height: 20%;
+        max-width: 40%;
+    }
+}
+
+.imagenRandom3 {
+   position: absolute;
+   right: 0;
+    & img {
+        // max-height: 50%;
+        max-width: 37%;
+    }
+}
+
+// SECCION VOY EN AUTO
+
+.auto {
+    background-color: #c7d1da;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    &-mapa {
+        margin: auto;
+        & img {
+            width: 33%;
+        }
+    }
+
+    &-pasos {
+        padding: 10px;
+    }
 }

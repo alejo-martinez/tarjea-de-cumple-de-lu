@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box; }
 
-body {
+.body-index {
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #370486 46%, #0086ff 100%); }
 
@@ -29,7 +29,8 @@ body {
   padding: 10px;
   transform: rotate(-23deg);
   transition: all 0.3s;
-  border-radius: 15px; }
+  border-radius: 15px;
+  font-size: 77%; }
   .vestimenta:hover {
     color: darkblue;
     background-color: white; }
@@ -37,9 +38,10 @@ body {
 .botonDonde {
   position: absolute;
   bottom: 20%;
-  left: 35%;
-  transition: 0.5s; }
-  .botonDonde:active {
+  left: 35%; }
+  .botonDonde button {
+    transition: 0.5s; }
+  .botonDonde button:active {
     transform: scale(0.9); }
   .botonDonde span {
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -56,6 +58,9 @@ body {
     cursor: pointer; }
   .botonDonde a {
     text-decoration: none; }
+  .botonDonde strong {
+    margin-left: 10px;
+    color: yellow; }
 
 .parrafoCanciones {
   position: absolute;
@@ -93,3 +98,73 @@ body {
 
 .imagenRandom4 {
   grid-area: imagen4; }
+
+.body-ubicacion {
+  background: #D3CCE3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.solucion {
+  width: 30%;
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+  font-family: 'Rubik Dirt', cursive; }
+
+.botones {
+  position: absolute;
+  top: 25%;
+  left: 33%; }
+  .botones button {
+    margin: 0 20px;
+    padding: 2px;
+    font-family: 'Silkscreen', cursive; }
+    .botones button-auto span {
+      text-decoration: none; }
+
+.contenedor-imagen img {
+  max-width: 13%;
+  position: relative;
+  left: 5%;
+  margin-top: 2px;
+  margin-bottom: 15px; }
+
+.contenedor-otra-imagen img {
+  max-width: 13%;
+  position: relative;
+  left: 5%;
+  margin-top: 2px;
+  margin-bottom: 15px; }
+
+.advertencia {
+  position: absolute;
+  bottom: 50%;
+  left: 50%; }
+
+.imagenRandom2 {
+  position: absolute;
+  top: 50%;
+  left: 50px; }
+  .imagenRandom2 img {
+    max-width: 40%; }
+
+.imagenRandom3 {
+  position: absolute;
+  right: 0; }
+  .imagenRandom3 img {
+    max-width: 37%; }
+
+.auto {
+  background-color: #c7d1da;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center; }
+  .auto-mapa {
+    margin: auto; }
+    .auto-mapa img {
+      width: 33%; }
+  .auto-pasos {
+    padding: 10px; }
