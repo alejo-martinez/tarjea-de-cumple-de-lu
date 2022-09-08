@@ -364,8 +364,9 @@ ul {
   .vestimenta {
     transform: rotate(0deg);
     grid-area: vestimenta;
-    font-size: 50%;
-    max-width: min-content; }
+    font-size: 30%;
+    max-width: 70%;
+    overflow: hidden; }
   .botonDonde {
     grid-area: boton;
     margin-left: 8px; }
@@ -383,8 +384,11 @@ ul {
     margin-left: 10px; }
   .imagenRandom1 {
     grid-area: imagen; }
+    .imagenRandom1 img {
+      transform: none; }
   .imagenRandom4 {
-    grid-area: imagen4; }
+    grid-area: imagen4;
+    width: 200px; }
     .imagenRandom4 img {
       margin: auto;
       display: block; }
@@ -409,9 +413,7 @@ ul {
 
 @media (max-width: 375px) {
   .body-index {
-    grid-gap: 30px 10px; }
-  .vestimenta {
-    font-size: 45%; } }
+    grid-gap: 30px 10px; } }
 
 @media (max-width: 363px) {
   .body-index {

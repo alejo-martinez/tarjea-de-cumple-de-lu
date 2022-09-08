@@ -532,9 +532,9 @@ ul {
     .vestimenta {
         transform: rotate(0deg);
         grid-area: vestimenta;
-        font-size: 50%;
-        max-width: min-content;
-        
+        font-size: 30%;
+        max-width: 70%;
+        overflow: hidden;
     }
 
     .botonDonde {
@@ -561,12 +561,14 @@ ul {
 
     .imagenRandom1 {
         grid-area: imagen;
-        
+        & img {
+            transform: none;
+        }
     }
 
     .imagenRandom4 {
         grid-area: imagen4;
-        // margin-top: 10px;
+        width: 200px;
         & img {
             margin: auto;
             display: block;
@@ -613,10 +615,6 @@ ul {
 @media (max-width: 375px) {
     .body-index{
         grid-gap: 30px 10px;
-    }
-
-    .vestimenta {
-        font-size: 45%;
     }
 }
 
