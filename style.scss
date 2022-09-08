@@ -555,8 +555,8 @@ ul {
     .bebida {
         grid-area: bebida;
         transform: rotate(0);
-        margin: auto;
-        margin-left: 10px;
+        margin-left: 30px;
+        font-size: 90%;
     }
 
     .imagenRandom1 {
@@ -651,6 +651,7 @@ ul {
         padding: 2px;
         grid-row: 5/5;
         margin: auto;
+        margin-left: 25px;
     }
 
     .parrafoCanciones {
