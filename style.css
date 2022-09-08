@@ -1,28 +1,56 @@
+@media (max-width: 425px) {
+  .body-index {
+    display: grid;
+    grid-template-columns: 20px 50px;
+    grid-template-rows: 20% 40% 10% 20% 10%;
+    grid-template-areas: "date vestimenta" "imagen imagen" "bebida bebida" "canciones imagen4" "boton boton"; }
+  .fechaHora {
+    grid-area: date;
+    width: fit-content; }
+    .fechaHora strong {
+      font-size: 56%; }
+  .vestimenta {
+    grid-area: vestimenta; }
+  .botonDonde {
+    grid-area: boton; }
+  .parrafoCanciones {
+    grid-area: canciones;
+    transform: 0deg; }
+  .bebida {
+    grid-area: bebida; }
+  .imagenRandom {
+    grid-area: imagen; } }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
+a {
+  text-decoration: none; }
+
 .body-index {
   background: #020024;
-  background: linear-gradient(90deg, #020024 0%, #370486 46%, #0086ff 100%); }
+  background: linear-gradient(90deg, #020024 0%, #370486 46%, #0086ff 100%);
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas: "date canciones canciones" "vestimenta imagen bebida" ". boton imagen4"; }
 
 .fechaHora {
-  position: absolute;
-  top: 1.4%;
-  left: 7%;
+  grid-area: date;
   font-family: 'Rubik Maze', cursive;
   color: white;
-  margin-top: 20px;
+  margin: auto;
+  font-size: 170%;
+  justify-items: center;
   background-color: rgba(255, 253, 254, 0.12);
   padding: 15px;
   border-radius: 13px;
-  font-size: 170%; }
+  margin-top: 10px; }
 
 .vestimenta {
-  position: absolute;
-  bottom: 54%;
-  left: 10%;
+  grid-area: vestimenta;
   font-family: 'Silkscreen', cursive;
   color: white;
   background-color: rgba(255, 253, 254, 0.12);
@@ -30,15 +58,16 @@
   transform: rotate(-23deg);
   transition: all 0.3s;
   border-radius: 15px;
-  font-size: 77%; }
+  font-size: 77%;
+  margin: auto; }
   .vestimenta:hover {
     color: darkblue;
     background-color: white; }
 
 .botonDonde {
-  position: absolute;
-  bottom: 20%;
-  left: 35%; }
+  grid-column: 2 / 3;
+  grid-area: boton;
+  margin-top: 5rem; }
   .botonDonde button {
     transition: 0.5s; }
   .botonDonde button:active {
@@ -63,16 +92,15 @@
     color: yellow; }
 
 .parrafoCanciones {
-  position: absolute;
-  right: 10%;
-  top: 20%;
+  margin: auto;
+  margin-top: 4rem;
+  grid-area: canciones;
   font-family: 'Silkscreen', cursive;
   transform: rotate(12deg); }
 
 .bebida {
-  position: absolute;
-  top: 50%;
-  right: 9.5%;
+  margin: auto;
+  grid-area: bebida;
   font-family: 'Shadows Into Light', cursive;
   font-size: 140%;
   font-weight: bold;
@@ -84,20 +112,19 @@
   transform: rotate(2deg); }
 
 .imagenRandom1 {
-  position: absolute;
-  top: 20%;
-  left: 42%; }
+  margin: auto;
+  grid-area: imagen; }
   .imagenRandom1 img {
-    max-height: 19rem; }
-
-.imagenRandom2 {
-  grid-area: imagen2; }
-
-.imagenRandom3 {
-  grid-area: imagen3; }
+    max-height: 19rem;
+    transition: 0.5s; }
+    .imagenRandom1 img:hover {
+      transform: scale(1.2) rotate(30deg); }
 
 .imagenRandom4 {
   grid-area: imagen4; }
+  .imagenRandom4 img {
+    width: 60%;
+    margin-bottom: 2rem; }
 
 .body-ubicacion {
   background: #D3CCE3;
@@ -105,66 +132,130 @@
   background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E9E4F0, #D3CCE3);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "solucion botones imagen3" "imagen2 botones imagen3" "imagen2 botones  ."; }
 
 .solucion {
-  width: 30%;
-  position: relative;
-  top: 3rem;
-  left: 3rem;
-  font-family: 'Rubik Dirt', cursive; }
+  width: 70%;
+  grid-area: solucion;
+  font-family: 'Rubik Dirt', cursive;
+  margin: auto; }
 
 .botones {
-  position: absolute;
-  top: 25%;
-  left: 33%; }
+  grid-area: botones;
+  margin-top: 50px; }
   .botones button {
     margin: 0 20px;
     padding: 2px;
     font-family: 'Silkscreen', cursive; }
-    .botones button-auto span {
-      text-decoration: none; }
 
-.contenedor-imagen img {
-  max-width: 13%;
-  position: relative;
-  left: 5%;
-  margin-top: 2px;
-  margin-bottom: 15px; }
+.contenedor-imagen {
+  margin-top: 5px; }
+  .contenedor-imagen img {
+    margin-bottom: 7rem; }
 
-.contenedor-otra-imagen img {
-  max-width: 13%;
-  position: relative;
-  left: 5%;
-  margin-top: 2px;
-  margin-bottom: 15px; }
-
-.advertencia {
-  position: absolute;
-  bottom: 50%;
-  left: 50%; }
+.contenedor-otra-imagen {
+  margin-top: 5px; }
+  .contenedor-otra-imagen img {
+    margin-top: 2px;
+    margin-bottom: 15px; }
 
 .imagenRandom2 {
-  position: absolute;
-  top: 50%;
-  left: 50px; }
-  .imagenRandom2 img {
-    max-width: 40%; }
+  grid-area: imagen2;
+  margin: auto;
+  margin-left: 6rem;
+  rotate: 20deg; }
 
 .imagenRandom3 {
-  position: absolute;
-  right: 0; }
-  .imagenRandom3 img {
-    max-width: 37%; }
+  grid-area: imagen3;
+  grid-row: 2/3; }
 
 .auto {
   background-color: #c7d1da;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-items: center; }
+  display: grid;
+  grid-template-columns: 60% 40%; }
   .auto-mapa {
     margin: auto; }
-    .auto-mapa img {
-      width: 33%; }
   .auto-pasos {
     padding: 10px; }
+
+ul {
+  list-style: none;
+  font-family: cursive; }
+  ul li {
+    margin: 19px 0px;
+    background-color: goldenrod;
+    padding: 3px;
+    border-radius: 5px;
+    max-width: max-content; }
+
+.imagen-voyauto img {
+  width: 27%; }
+
+.body-bondi {
+  background-color: #c7d1da;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-areas: "parrafoBondi parrafoBondi" "imagenC selfie" "perros btn"; }
+
+.contenedorParrafos {
+  display: flex;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  grid-area: parrafoBondi;
+  margin: auto;
+  gap: 30px; }
+  .contenedorParrafos-ida {
+    margin-left: 15px;
+    padding: 6px;
+    background-color: rgba(231, 195, 63, 0.18);
+    border-radius: 10px; }
+  .contenedorParrafos-vuelta {
+    padding: 6px;
+    background-color: rgba(231, 195, 63, 0.18);
+    border-radius: 10px; }
+
+.imagen-bondi {
+  grid: imagenC;
+  display: flex;
+  margin-bottom: 2rem; }
+  .imagen-bondi strong {
+    margin-top: 6rem;
+    font-size: 75%; }
+  .imagen-bondi img {
+    margin-left: 50px; }
+
+.selfieGato {
+  grid-area: selfie;
+  margin: auto; }
+
+.imagen-perros {
+  grid-area: perros;
+  margin: auto; }
+
+.btn-final {
+  grid-area: btn;
+  margin-top: 10rem; }
+  .btn-final button {
+    padding: 2px;
+    font-family: monospace;
+    background-color: #000000;
+    border-radius: 6px;
+    transition: 0.2s; }
+    .btn-final button:hover {
+      transform: scale(1.2); }
+    .btn-final button a {
+      color: white; }
+
+.body-final {
+  background: #2b5876;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4e4376, #2b5876);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: grid; }

@@ -1,9 +1,14 @@
+@import "responsive";
+@import "variables";
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
 
 .body-index {
     // font-family: 'Rubik Dirt', cursive;
@@ -11,27 +16,30 @@
     // font-family: 'Silkscreen', cursive;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,4,134,1) 46%, rgba(0,134,255,1) 100%);
-
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: 
+    "date canciones canciones"
+    "vestimenta imagen bebida"
+    ". boton imagen4";
 }
 
 .fechaHora {
-    position: absolute;
-    top: 1.4%;
-    left: 7%;
+    grid-area: date;
     font-family: 'Rubik Maze', cursive;
     color: white;
-    margin-top: 20px;
+    margin: auto;
+    font-size: 170%;
+    justify-items: center;
     background-color: rgba(255, 253, 254, 0.12);
     padding: 15px;
     border-radius: 13px;
-    font-size: 170%;
-    
+    margin-top: 10px;
 }
 
 .vestimenta {
-    position: absolute;
-    bottom: 54%;
-    left: 10%;
+    grid-area: vestimenta;
     font-family: 'Silkscreen', cursive;
     color: white;
     background-color: rgba(255, 253, 254, 0.12);
@@ -40,6 +48,7 @@
     transition: all 0.3s;
     border-radius: 15px;
     font-size: 77%;
+    margin: auto;
 
     &:hover {
         color: darkblue;
@@ -48,12 +57,12 @@
 }
 
 .botonDonde {
-    position: absolute;
-    bottom: 20%;
-    left: 35%;
+    grid-column: 2 / 3;
+    grid-area: boton;
+    margin-top: 5rem;
     & button {
         transition: 0.5s;
-     }
+    }
     & button:active {
         transform: scale(0.9);
     }
@@ -83,17 +92,16 @@
     
 
 .parrafoCanciones {
-    position: absolute;
-    right: 10%;
-    top: 20%;
+    margin: auto;
+    margin-top: 4rem;
+    grid-area: canciones;
     font-family: 'Silkscreen', cursive;
     transform: rotate(12deg);
 }
 
 .bebida {
-    position: absolute;
-    top: 50%;
-    right: 9.5%;
+    margin: auto;
+    grid-area: bebida;
     font-family: 'Shadows Into Light', cursive;
     font-size: 140%;
     font-weight: bold;
@@ -106,24 +114,23 @@
 }
 
 .imagenRandom1 {
-    position: absolute;
-    top: 20%;
-    left: 42%;
+margin: auto;
+    grid-area: imagen;
     & img {
         max-height: 19rem;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.2) rotate(30deg);
+        }
     }
-}
-
-.imagenRandom2 {
-    grid-area: imagen2;
-}
-
-.imagenRandom3 {
-    grid-area: imagen3;
 }
 
 .imagenRandom4 {
     grid-area: imagen4;
+    & img {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
 }
 
 // PAGINA UBICACION
@@ -132,74 +139,67 @@
     background: #D3CCE3;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "solucion botones imagen3"
+    "imagen2 botones imagen3"
+    "imagen2 botones  .";
 }
 
 .solucion {
-    width: 30%;
-    position: relative;
-    top: 3rem;
-    left: 3rem;
+    width: 70%;
+    grid-area: solucion;
     font-family: 'Rubik Dirt', cursive;
+    margin: auto;
 }
 
 .botones {
-   position: absolute;
-   top: 25%;
-   left: 33%;
+    grid-area: botones;
+    margin-top: 50px;
    & button {
     margin: 0 20px;
     padding: 2px;
     font-family: 'Silkscreen', cursive;
-        &-auto {
-            & span{
-                text-decoration: none; // NO TOMA EL TEXT DECORATION
-            }
-        }
    }
 }
 
 .contenedor-imagen {
+    margin-top: $marginImagenesBro;
     & img {
-        max-width: 13%;
-        position: relative;
-        left: 5%;
-        margin-top: 2px;
-        margin-bottom: 15px;
+        margin-bottom: 7rem;
     }
 }
 
 .contenedor-otra-imagen {
+    margin-top: $marginImagenesBro;
     & img {
-        max-width: 13%;
-        position: relative;
-        left: 5%;
         margin-top: 2px;
         margin-bottom: 15px;
     }
 }
 
 .advertencia {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
+
 }
 
 .imagenRandom2 {
-    position: absolute;
-    top: 50%;
-    left: 50px;
+    grid-area: imagen2;
+    margin: auto;
+    margin-left: 6rem;
+    rotate: 20deg;
     & img {
-        // max-height: 20%;
-        max-width: 40%;
+        
+        
     }
 }
 
 .imagenRandom3 {
-   position: absolute;
-   right: 0;
+    grid-area: imagen3;
+    grid-row: 2/3;
     & img {
-        // max-height: 50%;
-        max-width: 37%;
+        
     }
 }
 
@@ -207,13 +207,12 @@
 
 .auto {
     background-color: #c7d1da;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-items: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
     &-mapa {
         margin: auto;
         & img {
-            width: 33%;
+            
         }
     }
 
@@ -221,3 +220,109 @@
         padding: 10px;
     }
 }
+
+ul {
+    list-style: none;
+    font-family:cursive;
+    & li {
+        margin: 19px 0px;
+        background-color: goldenrod;
+        padding: 3px;
+        border-radius: 5px;
+        max-width: max-content;
+    }
+}
+
+.imagen-voyauto {
+    & img {
+        width: 27%;
+    }
+}
+
+// SECCION VOY EN BONDI
+
+.body-bondi {
+    background-color: #c7d1da;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: 
+    "parrafoBondi parrafoBondi"
+    "imagenC selfie"
+    "perros btn";
+}
+
+.contenedorParrafos {
+    display: flex;
+    font-family:fantasy;
+    letter-spacing: 1px;
+    grid-area: parrafoBondi;
+    margin: auto;
+    gap: 30px;
+    &-ida {
+        margin-left: 15px;
+        padding: 6px;
+        background-color: rgba(231, 195, 63, 0.18);
+        border-radius: 10px;
+    }
+
+    &-vuelta {
+        padding: 6px;
+        background-color: rgba(231, 195, 63, 0.18);
+        border-radius: 10px;
+    }
+}
+
+.imagen-bondi {
+    grid: imagenC;
+    display: flex;
+    margin-bottom: 2rem;
+    & strong {
+        margin-top: 6rem;
+        font-size: 75%;
+    }
+    & img {
+        margin-left: 50px;
+    }
+}
+
+.selfieGato {
+    grid-area: selfie;
+    margin: auto;
+}
+
+.imagen-perros {
+    grid-area: perros;
+    margin: auto;
+}
+
+.btn-final {
+    grid-area: btn;
+    margin-top: 10rem;
+
+    & button {
+        padding: 2px;
+        font-family: monospace;
+        background-color: #000000;
+        border-radius: 6px;
+        transition: 0.2s;
+        &:hover{
+            transform: scale(1.2);
+        }
+        & a{
+            color: white;
+        }
+    }
+}
+
+
+// SECCION PAGINA FINAL
+
+.body-final {
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    display: grid;
+}
+

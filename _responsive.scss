@@ -1,0 +1,44 @@
+@media (max-width: 425px) {
+    
+    .body-index {
+        display: grid;
+        grid-template-columns: 20px 50px;
+        grid-template-rows: 20% 40% 10% 20% 10%;
+        grid-template-areas: 
+        "date vestimenta"
+        "imagen imagen"
+        "bebida bebida"
+        "canciones imagen4"
+        "boton boton";
+        
+    }
+    
+    .fechaHora {
+        grid-area: date;
+        width: fit-content;
+        & strong {
+            font-size: 56%;
+        }
+    }
+
+    .vestimenta {
+        grid-area: vestimenta;
+    }
+
+    .botonDonde {
+        grid-area: boton;
+    }
+
+    .parrafoCanciones {
+        grid-area: canciones;
+        transform: 0deg;
+    }
+
+    .bebida {
+        grid-area: bebida;
+    }
+
+    .imagenRandom {
+        grid-area: imagen;
+    }
+}
