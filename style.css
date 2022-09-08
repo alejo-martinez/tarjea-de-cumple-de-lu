@@ -1,26 +1,3 @@
-@media (max-width: 425px) {
-  .body-index {
-    display: grid;
-    grid-template-columns: 20px 50px;
-    grid-template-rows: 20% 40% 10% 20% 10%;
-    grid-template-areas: "date vestimenta" "imagen imagen" "bebida bebida" "canciones imagen4" "boton boton"; }
-  .fechaHora {
-    grid-area: date;
-    width: fit-content; }
-    .fechaHora strong {
-      font-size: 56%; }
-  .vestimenta {
-    grid-area: vestimenta; }
-  .botonDonde {
-    grid-area: boton; }
-  .parrafoCanciones {
-    grid-area: canciones;
-    transform: 0deg; }
-  .bebida {
-    grid-area: bebida; }
-  .imagenRandom {
-    grid-area: imagen; } }
-
 * {
   padding: 0;
   margin: 0;
@@ -219,6 +196,14 @@ ul {
     background-color: rgba(231, 195, 63, 0.18);
     border-radius: 10px; }
 
+.btn-paradas {
+  background-color: #000000;
+  border-radius: 10px; }
+  .btn-paradas a {
+    padding: 5px;
+    color: #088408;
+    font-weight: bold; }
+
 .imagen-bondi {
   grid: imagenC;
   display: flex;
@@ -258,4 +243,259 @@ ul {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4e4376, #2b5876);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: grid; }
+  display: grid;
+  grid-template-areas: "imagen6 . ." "parrafoFinal imagen7 ." "imagenLula . .";
+  grid-gap: 15px; }
+
+.imagenRandom6 {
+  grid-area: imagen6;
+  margin: auto; }
+
+.imagenRandom7 {
+  grid-area: imagen7;
+  margin: auto; }
+
+.parrafo-final {
+  grid-area: parrafoFinal;
+  margin: auto;
+  color: #ED36BE;
+  background-color: #000000;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 10px; }
+
+.imagenLula {
+  grid-area: imagenLula;
+  margin: auto; }
+  .imagenLula strong {
+    color: #189F18;
+    background-color: beige;
+    padding: 6px;
+    border-radius: 6px; }
+
+@media (max-width: 768px) {
+  .body-ubicacion {
+    display: grid;
+    grid-template-areas: "solucion botones" "imagen2 botones" "imagen3 botones"; }
+  .solucion {
+    grid-area: solucion;
+    font-size: 120%; }
+  .botones {
+    grid-area: botones; }
+  .contenedor-imagen {
+    text-align: center; }
+  .contenedor-otra-imagen {
+    text-align: center; }
+  .imagenRandom2 {
+    grid-area: imagen2;
+    rotate: 0deg; }
+  .imagenRandom3 {
+    grid-area: imagen3;
+    text-align: center; }
+    .imagenRandom3 img {
+      border-radius: 10px; }
+  .selfieGato {
+    grid-row: 3/3; }
+  .btn-final {
+    grid-row: 3/2;
+    rotate: 75deg;
+    margin-left: 5rem; }
+  .imagenRandom7 img {
+    width: 200px; } }
+
+@media (max-width: 710px) {
+  .body-bondi {
+    grid-template-areas: "parrafoBondi" "imagenC" "btnFinal ." "perros selfie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 40% 10% 35%;
+    gap: 17px; }
+  .contenedorParrafos {
+    text-align: center; }
+    .contenedorParrafos-vuelta {
+      grid-column: 2/2; }
+  .imagen-bondi {
+    grid-row: 2/2; } }
+
+@media (max-width: 670px) {
+  .body-bondi {
+    display: flex;
+    flex-flow: column nowrap; }
+  .btn-final {
+    rotate: 0deg;
+    margin: auto; } }
+
+@media (max-width: 606px) {
+  .body-ubicacion {
+    grid-template-areas: "solucion" "botones" "botones" "imagen2" "imagen3"; }
+  .solucion {
+    text-align: center;
+    margin-top: 2rem; }
+  .div-botones {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+  .div-otroBoton {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; } }
+
+@media (max-width: 538px) {
+  .body-final {
+    display: flex;
+    flex-flow: column nowrap; }
+  .imagenLula {
+    display: flex;
+    flex-flow: row nowrap; }
+    .imagenLula strong {
+      height: min-content; } }
+
+@media (max-width: 425px) {
+  .body-index {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 40% 10% 20% 10%;
+    grid-template-areas: "date vestimenta" "bebida imagen" "bebida imagen" "canciones imagen4" "boton boton";
+    grid-gap: 20px; }
+  .fechaHora {
+    grid-area: date;
+    width: fit-content; }
+    .fechaHora strong {
+      font-size: 67%; }
+  .vestimenta {
+    transform: rotate(0deg);
+    grid-area: vestimenta;
+    font-size: 50%;
+    max-width: min-content; }
+  .botonDonde {
+    grid-area: boton;
+    margin-left: 8px; }
+  .parrafoCanciones {
+    grid-area: canciones;
+    transform: rotate(0deg);
+    margin-top: 0;
+    color: #37C141;
+    margin-left: 2rem;
+    grid-row: 3/5; }
+  .bebida {
+    grid-area: bebida;
+    transform: rotate(0);
+    margin: auto;
+    margin-left: 10px; }
+  .imagenRandom1 {
+    grid-area: imagen; }
+  .imagenRandom4 {
+    grid-area: imagen4; }
+    .imagenRandom4 img {
+      margin: auto;
+      display: block; }
+  .imagenRandom2 {
+    margin: auto; }
+  .auto-mapa img {
+    max-width: 200px; }
+  .body-bondi {
+    align-items: center; }
+  .imagen-bondi {
+    flex-flow: column; }
+    .imagen-bondi strong {
+      text-align: center;
+      rotate: 90deg;
+      margin-top: 50px; }
+    .imagen-bondi img {
+      max-width: 243px; }
+  .imagenLula {
+    flex-flow: column nowrap; }
+    .imagenLula strong {
+      margin-top: 20px; } }
+
+@media (max-width: 375px) {
+  .body-index {
+    grid-gap: 30px 10px; }
+  .vestimenta {
+    font-size: 45%; } }
+
+@media (max-width: 363px) {
+  .body-index {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "date" "vestimenta" "imagen" "bebida" "canciones" "imagen4" "boton"; }
+  .fechaHora {
+    margin: auto; }
+    .fechaHora strong {
+      font-size: 150%;
+      color: #FB3CF2; }
+  .vestimenta {
+    color: #FB3CF2;
+    font-size: 100%;
+    text-align: center; }
+  .bebida {
+    text-align: center;
+    padding: 2px;
+    grid-row: 5/5;
+    margin: auto; }
+  .parrafoCanciones {
+    margin: auto;
+    text-align: center;
+    transition: 2s;
+    grid-row: 4/5; }
+  .imagenRandom4 {
+    margin-top: 50px; } }
+
+@media (max-width: 329px) {
+  .contenedorParrafos-ida {
+    font-size: 85%; }
+  .contenedorParrafos-vuelta {
+    font-size: 85%; }
+  .imagen-bondi img {
+    margin-left: 0; } }
+
+@media (max-width: 329px) {
+  .fechaHora {
+    font-size: 110%; }
+  .vestimenta {
+    font-size: 70%;
+    padding: 3px;
+    width: min-content; }
+  .botonDonde button {
+    margin-left: 10px; } }
+
+@media (max-width: 320px) {
+  .auto {
+    display: flex;
+    flex-flow: column nowrap; }
+  .imagen-voyauto img {
+    width: 70%; } }
+
+@media (max-width: 303px) {
+  .imagenRandom2 {
+    margin-bottom: 3rem; }
+    .imagenRandom2 img {
+      max-width: 200px; }
+  .contenedorParrafos {
+    flex-flow: column nowrap; }
+    .contenedorParrafos-ida {
+      margin: auto; }
+  .selfieGato img {
+    width: 200px; }
+  .imagen-perros img {
+    width: 200px; }
+  .btn-final {
+    margin-bottom: 20px; }
+  .imagenRandom6 img {
+    width: 185px; }
+  .imagenLula {
+    text-align: center; }
+    .imagenLula img {
+      width: 150px;
+      margin: auto; } }
+
+@media (max-width: 231px) {
+  .vestimenta {
+    font-size: 50%; }
+  .bebida {
+    margin: auto; }
+  .imagen-bondi img {
+    width: 185px; }
+  .selfieGato img {
+    width: 175px; }
+  .imagen-perros img {
+    width: 175px; } }
